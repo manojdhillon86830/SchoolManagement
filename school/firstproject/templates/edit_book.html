@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+ <head>
+   <title> View Student Record </title>
+   <link rel="stylesheet" href="{% static 'school.css' %}"
+ </head>
+<body>
+  <div id="header">
+    <h1> School Record Management </h1>
+     <div id="nav">
+       <a href="view-students">View All</a>
+       <a href="new-student">Add New</a>
+     </div>
+  </div>
+<div id="main">
+  <h1> Edit Student Record </h1>
+  <form action="edit" method="post">
+  {% csrf_token %}
+  <input type="Hidden" name="studentid" value="{{student.id}}">
+  {{form}}
+  <input type="submit" value="Save">
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+body{
+  background-color:#ADFF2F;
+  margin: 0px 0px 0px 0px;
+  font-family: "serif"
+}
+#header {
+ padding-bottom:20px;
+ text-align:center;
+ font-size:60px;
+}
+#heder h1{
+  text-align:center;
+}
+#nav{
+  width:60%;
+  margin:auto;
+}
+#nav a{
+  width:500px;
+  border:solid 0.5px;
+  font-size:30px;
+  text-decoration:none;
+  padding-left:20px;
+  padding-right:20px;
+}
+#main{
+  margin:auto;
+  text-align:center;
+  padding:5px;
+  padding-top:5px;
+}
+#main h2 , #main form{
+  text-align:center;
+  font-size:40px;
+}
+#main table{
+  width:70%;
+  padding-left:25%;
+  padding-right:1%;
+  text-align:center;
+}
+#main table th{
+  background-color:gray;
+  color:white;
+}
+.btn{
+  width:500px;
+  border:solid 0.5px;
+  font-size:18px;
+  text-decoration:none;
+  padding-left:10px;
+  padding-right:20px;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title> New Student Form </title>
+    <link rel="stylesheet" href="{% static 'school.css' %}">
+ </head>
+<body>
+   <div id="header">
+    <h1> School Record Manangement </h1>
+    <div id="nav">
+      <a href="view-students">View All</a>
+      <a href="new-student">Add New</a>
+
+    </div>
+   </div>
+<div id="main">
+   <h2> Add New Student Record </h2>
+   <form action="add" method="post">
+   {% csrf_token %}
+   {{form}}
+   <input type="submit" value="Add">
+   </form>
+</div>
+</body>
+</html>

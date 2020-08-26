@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+ <head>
+   <title> View Student Record </title>
+   <link rel="stylesheet" href="{% static 'school.css' %}"
+ </head>
+<body>
+  <div id="header">
+    <h1> School Record Management </h1>
+     <div id="nav">
+       <a href="view-students">View All</a>
+       <a href="new-student">Add New</a>
+       
+     </div>
+  </div>
+  <div id="main">
+    <h2> View Students Records </h2>
+    <table>
+      <thead>
+        <th> Name </th>
+        <th> Roll No. </th>
+        <th> Standard </th>
+        <th> Father's Name </th>
+      </thead>
+      {% for student in students %}
+      <tr>
+        <td>{{student.name}}</td>
+        <td>{{student.roll}}</td>
+        <td>{{student.standard}}</td>
+        <td>{{student.father}}</td>
+        <td><a class="btn" href="edit-student?studentid={{student.id}}">Edit</a></td>
+        <td><a class="btn" href="delete-student?studentid={{student.id}}">Delete</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</body>
+</html>
